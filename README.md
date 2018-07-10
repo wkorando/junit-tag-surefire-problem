@@ -1,6 +1,6 @@
 # junit-tag-surefire-problem
 
-The Native maven surefire plugin doesn't recognize the excludeTags/includeTags. This project should only execute a single test, but executes all three. 
+The native maven surefire plugin doesn't recognize the excludeTags/includeTags properties. This project should only execute a single test by default, but currently executes all three. 
 
 Correct behavior would be:
 * executing a single test if nothing is commented out
