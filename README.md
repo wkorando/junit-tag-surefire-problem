@@ -4,6 +4,6 @@ The native maven surefire plugin doesn't recognize the excludeTags/includeTags p
 
 Correct behavior would be:
 * executing a single test if nothing is commented out
-* executing two tests in "includeTags" is commented out
+* executing two tests if "includeTags" is commented out
 * executing a single test if "excludeTags" is commented out
 * executing three tests if both "includeTags" and "excludeTags" is commented out
