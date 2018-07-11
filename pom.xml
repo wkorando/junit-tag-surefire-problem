@@ -51,20 +51,16 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.0</version>
 				<configuration>
+					<groups>includeTag</groups>
+					<excludedGroups>excludeTag</excludedGroups>
 					<properties>
-						<!-- Only one test should execute if working correctly. -->
-						<excludeTags>excludeTag</excludeTags>
-						<includeTags>includeTag</includeTags>
+						<configurationParameters>
+							junit.jupiter.execution.parallel.enabled=false
+							junit.jupiter.execution.parallel.config.dynamic.factor=2
+						</configurationParameters>
 					</properties>
+
 				</configuration>
-				<!-- Uncomment below for excludeTags/includeTags to work correctly -->
-<!-- 				<dependencies> -->
-<!-- 					<dependency> -->
-<!-- 						<groupId>org.junit.platform</groupId> -->
-<!-- 						<artifactId>junit-platform-surefire-provider</artifactId> -->
-<!-- 						<version>${junit-platform.version}</version> -->
-<!-- 					</dependency> -->
-<!-- 				</dependencies> -->
 			</plugin>
 		</plugins>
 	</build>
